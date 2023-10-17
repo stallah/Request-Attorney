@@ -6,6 +6,7 @@ public class RequestAttorneyTest {
         RequestAttorneyAppointment ra = new RequestAttorneyAppointment();
         Assert.assertEquals("hello world", ra.toString());
     }
+
     public static void main(String[] args) {
         System.out.println("testing file");        
     }
