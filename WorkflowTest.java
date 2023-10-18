@@ -9,17 +9,32 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class WorkflowTest {
     @Test
-    public void testSendRequestForm() {
-        Workflow wf = new Workflow();
+    public void testSaveAttorneyDetails() {
+        Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
-        Assert.assertEquals(0, wf.sendRequestForm(0));
+        
+    }
+    
+    @Test
+    public void testSendRequestForm() {
+        Workflow wf = Workflow.createWorkflow();
+        Assert.assertNotNull(wf);
+        Assert.assertEquals(0, wf.sendForm(0));
+        Assert.assertTrue(wf.sendForm(0)>0);
 
     }
 
     @Test
     public void testAttorneyResponse() {
-        Workflow wf = new Workflow();
+        Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
-        Assert.assertFalse(wf.attorneyResponse(0));
+        Assert.assertTrue(wf.sendAttResponse(0));
+    }
+
+    @Test
+    public void testSaveAttorneyResponse() {
+        Workflow wf = Workflow.createWorkflow();
+        Assert.assertNotNull(wf);
+        Assert.assertTrue(wf.saveAttDetails(null));
     }
 }
