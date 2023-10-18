@@ -12,6 +12,7 @@ public class RequestAttorneyTest {
     public void testObject(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
         Assert.assertNotNull(ra);
+        //testing expected results from attriubtes
         Assert.assertEquals(0, ra.getRequestFormNumber());
         Assert.assertEquals(null, ra.getAppointmentDetail());
     }
@@ -20,6 +21,7 @@ public class RequestAttorneyTest {
     public void testConstructor(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment("Today", 0);
         Assert.assertNotNull(ra);
+        //testing constructor with parameters using getters
         Assert.assertEquals("Today", ra.getAppointmentDetail());
         Assert.assertEquals(0, ra.getRequestFormNumber());
 
@@ -28,12 +30,15 @@ public class RequestAttorneyTest {
     public void testAcceptRequest(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
         Assert.assertNotNull(ra);
+        //testing boolean for requests
         Assert.assertTrue(ra.acceptRequest(0));
     }
 
     @Test
     public void testRejectRequest(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
+        Assert.assertNotNull(ra);
+        //testing boolean for requests
         Assert.assertTrue(ra.acceptRequest(0));
     }
 
@@ -41,29 +46,25 @@ public class RequestAttorneyTest {
     public void testUpdateAvailability(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
         Assert.assertNotNull(ra);
+        //testing condition if availability is updated
         Assert.assertTrue(ra.updateAvailability(null));
-        //Assert.assertEquals("new availability details",);
     }
 
     @Test
     public void testAppointmentDetails(){
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
         Assert.assertNotNull(ra);
+        //testing return of appointmentDetails()
         Assert.assertEquals(null, ra.appointmentDetails(0));
-        //Assert.assertEquals("new availability details",);
     }
     @Test
     public void testFormNumber(){
+        //testing positive/negative request form numbers
         RequestAttorneyAppointment rr = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, -1);
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 1);
         Assert.assertFalse(rr.getRequestFormNumber()>0);
         Assert.assertTrue(ra.getRequestFormNumber()>0);
 
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println("testing file");        
     }
 
 }
