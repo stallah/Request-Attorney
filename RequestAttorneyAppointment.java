@@ -1,3 +1,9 @@
+
+/**
+ * Business Object to request an attorney for appointment
+ * @author Smita Tallah
+ * @version 1.0
+ */
 public class RequestAttorneyAppointment {
     private int requestFormNumber;
     private String appointmentDetail;

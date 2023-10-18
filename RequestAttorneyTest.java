@@ -1,3 +1,9 @@
+/**
+ * A JUnit tester file to test methods from business object file:
+ * RequestAttorneyAppointment
+ * @author: Smita Tallah
+ * @version: 1.0
+ */
 import org.junit.*;
 import static org.hamcrest.CoreMatchers.*;
 
