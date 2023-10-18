@@ -23,7 +23,7 @@ public class RequestAttorneyAppointment {
     public String getAppointmentDetail(){
         return this.appointmentDetail;
     }
-    
+
     public void setAppointmentDetail(String appointmentDetail){
         this.appointmentDetail = appointmentDetail;
     }
