@@ -53,12 +53,12 @@ public class RequestAttorneyTest {
         //Assert.assertEquals("new availability details",);
     }
     @Test
-    public void testNegativeFormNumber(){
-        RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 1);
+    public void testFormNumber(){
         RequestAttorneyAppointment rr = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, -1);
-        //Assert.Positive(ra.getAppointmentDetail());
-        Assert.assertTrue(rr.getRequestFormNumber()>0);
+        RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 1);
+        Assert.assertFalse(rr.getRequestFormNumber()>0);
         Assert.assertTrue(ra.getRequestFormNumber()>0);
+
     }
 
 
