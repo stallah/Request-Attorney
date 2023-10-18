@@ -1,16 +1,24 @@
-public class Workflow{
+/**
+ * Workflow
+ * @author: Ashna Tirougnaname
+ * @version: 1.0
+ */
 
+public class Workflow{
+    
+    //private default constructor
     private Workflow(){
         
     }
     
+    //creating object
     public static Workflow createWorkflow()
     {
         Workflow wf = new Workflow();
         return wf;
     }
 
-    //changed void to boolean
+    //workflow methods
     private boolean saveAttorneyDetails(String attorneyDetails)
     {
         return true;
