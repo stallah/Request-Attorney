@@ -4,12 +4,12 @@ public class Workflow{
         
     }
 
-    private void saveAttorneyDetails()
+    private void saveAttorneyDetails(String attorneyDetails)
     {
 
     }
 
-    private int sendRequestForm(int requestFormNumber){
+    protected int sendRequestForm(int requestFormNumber){
         return 0;
     }
 
