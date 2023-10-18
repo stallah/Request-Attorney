@@ -3,7 +3,7 @@ public class Workflow{
     public Workflow(){
         
     }
-    //changed void to boolean
+    
     private boolean saveAttorneyDetails(String attorneyDetails)
     {
         return true;

@@ -53,11 +53,10 @@ public class RequestAttorneyAppointment {
         return true;
     }
 
-    //void to boolean
     public boolean updateAvailability(String newAvailability){
         return true;
     }
-    //void to string
+    
     public String appointmentDetails(int requestFormNumber){
         return null;
 
