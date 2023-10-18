@@ -1,4 +1,4 @@
-public class Workflow extends RequestAttorneyAppointment{
+public class Workflow{
 
     public Workflow(){
         
