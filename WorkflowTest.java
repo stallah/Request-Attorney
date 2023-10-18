@@ -1,3 +1,9 @@
+/**
+ * A JUnit tester file to test methods from Workflow file.
+ * @author: Ashna Tirougnaname
+ * @version: 1.0
+ */
+
 import org.junit.*;
 import static org.hamcrest.CoreMatchers.*;
 
