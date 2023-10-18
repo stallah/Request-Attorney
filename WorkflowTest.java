@@ -8,6 +8,7 @@ import org.junit.*;
 import static org.hamcrest.CoreMatchers.*;
 
 public class WorkflowTest {
+    //testing for saving attorney details
     @Test
     public void testSaveAttorneyDetails() {
         Workflow wf = Workflow.createWorkflow();
@@ -15,6 +16,7 @@ public class WorkflowTest {
         
     }
     
+    //testing for sending request form
     @Test
     public void testSendRequestForm() {
         Workflow wf = Workflow.createWorkflow();
@@ -24,6 +26,7 @@ public class WorkflowTest {
 
     }
 
+    //testing for attorney response
     @Test
     public void testAttorneyResponse() {
         Workflow wf = Workflow.createWorkflow();
@@ -31,6 +34,7 @@ public class WorkflowTest {
         Assert.assertTrue(wf.sendAttResponse(0));
     }
 
+    //testing for saving attorney response
     @Test
     public void testSaveAttorneyResponse() {
         Workflow wf = Workflow.createWorkflow();
