@@ -8,29 +8,36 @@ public class RequestAttorneyAppointment {
     private int requestFormNumber;
     private String appointmentDetail;
 
-    public RequestAttorneyAppointment(){
+    private RequestAttorneyAppointment(){
         this.appointmentDetail = null;
         this.requestFormNumber = 0;
     }
 
-    public RequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
+    private RequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
         this.requestFormNumber = requestFormNumber;
         this.appointmentDetail = appointmentDetail;
     }
 
-    public int getRequestFormNumber(){
+    public static RequestAttorneyAppointment createRequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
+        RequestAttorneyAppointment ra = new RequestAttorneyAppointment();
+        ra.setAppointmentDetail(appointmentDetail);
+        ra.setRequestFormNumber(requestFormNumber);
+        return ra;
+    }
+
+    protected int getRequestFormNumber(){
         return this.requestFormNumber;
     }
 
-    public void setRequestFormNumber(int requestFormNumber){
+    private void setRequestFormNumber(int requestFormNumber){
         this.requestFormNumber = requestFormNumber;
     }
 
-    public String getAppointmentDetail(){
+    protected String getAppointmentDetail(){
         return this.appointmentDetail;
     }
 
-    public void setAppointmentDetail(String appointmentDetail){
+    private void setAppointmentDetail(String appointmentDetail){
         this.appointmentDetail = appointmentDetail;
     }
 
@@ -41,13 +48,16 @@ public class RequestAttorneyAppointment {
     public boolean rejectRequest(int requestFormNumber){
         return true;
     }
-
-    public void updateAvailability(String newAvailability){
+    //void to boolean
+    public boolean updateAvailability(String newAvailability){
         System.out.println("new availability details");
+        return true;
     }
-
-    public void appointmentDetails(int requestFormNumber){
+    //void to string
+    public String appointmentDetails(int requestFormNumber){
         System.out.println("appointment details");
+        return null;
+
     }
 
 }

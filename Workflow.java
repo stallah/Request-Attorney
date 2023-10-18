@@ -3,10 +3,10 @@ public class Workflow{
     public Workflow(){
         
     }
-
-    private void saveAttorneyDetails(String attorneyDetails)
+    //changed void to boolean
+    private boolean saveAttorneyDetails(String attorneyDetails)
     {
-
+        return true;
     }
 
     protected int sendRequestForm(int requestFormNumber){
