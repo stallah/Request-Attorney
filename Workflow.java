@@ -1,3 +1,9 @@
+/**
+ * Workflow
+ * @author: Ashna Tirougnaname
+ * @version: 1.0
+ */
+
 public class Workflow{
     
     //private default constructor
