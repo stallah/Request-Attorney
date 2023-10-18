@@ -8,16 +8,18 @@ public class RequestAttorneyAppointment {
     private int requestFormNumber;
     private String appointmentDetail;
 
+    //private default constructor
     private RequestAttorneyAppointment(){
         this.appointmentDetail = null;
         this.requestFormNumber = 0;
     }
-
+    //private constructors with paramaters
     private RequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
         this.requestFormNumber = requestFormNumber;
         this.appointmentDetail = appointmentDetail;
     }
 
+    //creates the object
     public static RequestAttorneyAppointment createRequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
         RequestAttorneyAppointment ra = new RequestAttorneyAppointment();
         ra.setAppointmentDetail(appointmentDetail);
@@ -25,6 +27,7 @@ public class RequestAttorneyAppointment {
         return ra;
     }
 
+    //setters and getters for attributes
     protected int getRequestFormNumber(){
         return this.requestFormNumber;
     }
@@ -41,6 +44,7 @@ public class RequestAttorneyAppointment {
         this.appointmentDetail = appointmentDetail;
     }
 
+    //object methods
     public boolean acceptRequest(int requestFormNumber){
         return true;
     }
@@ -48,14 +52,13 @@ public class RequestAttorneyAppointment {
     public boolean rejectRequest(int requestFormNumber){
         return true;
     }
+
     //void to boolean
     public boolean updateAvailability(String newAvailability){
-        System.out.println("new availability details");
         return true;
     }
     //void to string
     public String appointmentDetails(int requestFormNumber){
-        System.out.println("appointment details");
         return null;
 
     }
