@@ -29,6 +29,8 @@ public class Workflow{
         return saveAttorneyDetails(attorneyDetails);
     }
 
+
+
     private int sendRequestForm(int requestFormNumber){
         return 0;
     }
@@ -37,9 +39,13 @@ public class Workflow{
         return sendRequestForm(requestFormNumber);  
     }
 
+
+
     public boolean attorneyResponse(int requestFormNumber) {
-        return false;
+        return attorneyResponse(requestFormNumber);
     }
+
+
 
     private boolean sendAttorneyResponse(int requestFormNumber) {
         return true;
