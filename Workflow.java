@@ -24,12 +24,6 @@ public class Workflow{
         return true;
     }
 
-    public boolean saveAttDetails(String attorneyDetails)
-    {
-        return saveAttorneyDetails(attorneyDetails);
-    }
-
-
 
     private int sendRequestForm(int requestFormNumber){
         return 0;
@@ -45,10 +39,6 @@ public class Workflow{
         return false;
     }
     
-    public boolean attResponse(int requestFormNumber) {
-        return attorneyResponse(requestFormNumber);
-    }
-
 
     private boolean sendAttorneyResponse(int requestFormNumber) {
         return true;

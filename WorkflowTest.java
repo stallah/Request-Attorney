@@ -1,7 +1,7 @@
 /**
  * A JUnit tester file to test methods from Workflow file.
  * @author: Ashna Tirougnaname
- * @version: 3.0
+ * @version: 4.0
  */
 
 import org.junit.*;
@@ -27,21 +27,21 @@ public class WorkflowTest {
 
     }
 
-    //testing for attorney response
+    //testing for sending attorney response
     @Test
-    public void testAttorneyResponse() {
+    public void testSendAttorneyResponse() {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
         //testing for attorney response
         Assert.assertTrue(wf.sendAttResponse(0));
     }
 
-    //testing for saving attorney response
+    //testing for attorney response
     @Test
-    public void testSendAttorneyResponse() {
+    public void testAttorneyResponse() {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
-        //testing if attorney details are saved successfully
-        Assert.assertTrue(wf.saveAttDetails(null));
+        //testing for attorney response
+        Assert.assertTrue(wf.attorneyResponse(0));
     }
 }
