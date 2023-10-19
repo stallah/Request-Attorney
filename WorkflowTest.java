@@ -13,7 +13,6 @@ public class WorkflowTest {
     public void testSaveAttorneyDetails() {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
-        //comment
     }
     
     //testing for sending request form
