@@ -38,7 +38,7 @@ public class WorkflowTest {
 
     //testing for saving attorney response
     @Test
-    public void testSaveAttorneyResponse() {
+    public void testSendAttorneyResponse() {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
         //testing if attorney details are saved successfully
