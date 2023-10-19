@@ -42,7 +42,7 @@ public class Workflow{
 
 
     public boolean attorneyResponse(int requestFormNumber) {
-        return attorneyResponse(requestFormNumber);
+        return false;
     }
 
 
