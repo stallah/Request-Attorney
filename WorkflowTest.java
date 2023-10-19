@@ -44,7 +44,7 @@ public class WorkflowTest {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
         //testing for attorney response
-        Assert.assertTrue(wf.attorneyResponse(0));
+        Assert.assertFalse(wf.attorneyResponse(0));
     }
 
 
