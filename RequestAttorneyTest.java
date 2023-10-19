@@ -39,7 +39,7 @@ public class RequestAttorneyTest {
         RequestAttorneyAppointment ra = RequestAttorneyAppointment.createRequestAttorneyAppointment(null, 0);
         Assert.assertNotNull(ra);
         //testing boolean for requests
-        Assert.assertTrue(ra.acceptRequest(0));
+        Assert.assertTrue(ra.rejectRequest(0));
     }
 
     @Test
