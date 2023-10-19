@@ -1,7 +1,7 @@
 /**
  * Workflow
  * @author: Ashna Tirougnaname
- * @version: 1.0
+ * @version: 3.0
  */
 
 public class Workflow{
@@ -44,7 +44,10 @@ public class Workflow{
     public boolean attorneyResponse(int requestFormNumber) {
         return false;
     }
-
+    
+    public boolean attResponse(int requestFormNumber) {
+        return attorneyResponse(requestFormNumber);
+    }
 
 
     private boolean sendAttorneyResponse(int requestFormNumber) {
