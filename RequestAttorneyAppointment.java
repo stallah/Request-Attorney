@@ -13,11 +13,6 @@ public class RequestAttorneyAppointment {
         this.appointmentDetail = null;
         this.requestFormNumber = 0;
     }
-    //private constructors with paramaters
-    private RequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
-        this.requestFormNumber = requestFormNumber;
-        this.appointmentDetail = appointmentDetail;
-    }
 
     //creates the object
     public static RequestAttorneyAppointment createRequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
