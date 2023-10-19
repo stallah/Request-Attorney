@@ -1,7 +1,7 @@
 /**
  * A JUnit tester file to test methods from Workflow file.
  * @author: Ashna Tirougnaname
- * @version: 4.0
+ * @version: 5.0
  */
 
 import org.junit.*;
@@ -10,11 +10,21 @@ import static org.hamcrest.CoreMatchers.*;
 public class WorkflowTest {
     //testing for saving attorney details
     @Test
-    public void testSaveAttorneyDetails() {
+    public void testCreateWorkflow() {
         Workflow wf = Workflow.createWorkflow();
         Assert.assertNotNull(wf);
     }
     
+        //testing for saving attorney response
+    @Test
+    public void testSaveAttorneyResponse() {
+        Workflow wf = Workflow.createWorkflow();
+        Assert.assertNotNull(wf);
+        //testing if attorney details are saved successfully
+        Assert.assertTrue(wf.saveAttDetails(null));
+    }
+
+
     //testing for sending request form
     @Test
     public void testSendRequestForm() {
@@ -27,14 +37,6 @@ public class WorkflowTest {
 
     }
 
-    //testing for sending attorney response
-    @Test
-    public void testSendAttorneyResponse() {
-        Workflow wf = Workflow.createWorkflow();
-        Assert.assertNotNull(wf);
-        //testing for attorney response
-        Assert.assertTrue(wf.sendAttResponse(0));
-    }
 
     //testing for attorney response
     @Test
@@ -44,4 +46,18 @@ public class WorkflowTest {
         //testing for attorney response
         Assert.assertTrue(wf.attorneyResponse(0));
     }
+
+
+    //testing for sending attorney response
+    @Test
+    public void testSendAttorneyResponse() {
+        Workflow wf = Workflow.createWorkflow();
+        Assert.assertNotNull(wf);
+        //testing for attorney response
+        Assert.assertTrue(wf.sendAttResponse(0));
+    }
+
+
+
+
 }

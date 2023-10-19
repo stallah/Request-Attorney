@@ -1,7 +1,7 @@
 /**
  * Workflow
  * @author: Ashna Tirougnaname
- * @version: 4.0
+ * @version: 5.0
  */
 
 public class Workflow{
@@ -18,11 +18,18 @@ public class Workflow{
         return wf;
     }
 
+
+
     //workflow methods
     private boolean saveAttorneyDetails(String attorneyDetails)
     {
         return true;
     }
+
+    public boolean saveAttDetails(String attorneyDetails) {
+        return saveAttorneyDetails(null);
+    }
+
 
 
     private int sendRequestForm(int requestFormNumber){
@@ -35,10 +42,13 @@ public class Workflow{
 
 
 
+
     public boolean attorneyResponse(int requestFormNumber) {
         return false;
     }
     
+
+
 
     private boolean sendAttorneyResponse(int requestFormNumber) {
         return true;
