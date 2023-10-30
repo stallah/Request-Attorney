@@ -33,8 +33,8 @@ public class Workflow{
 
 
     //send request form
-    private int sendRequestForm(int requestFormNumber){
-        return 0;
+    private boolean sendRequestForm(int requestFormNumber){
+        return false;
     }
 
     public int sendForm(int requestFormNumber) {
