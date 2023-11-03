@@ -1,4 +1,10 @@
-//version 2.0
+/**
+ * Data Entry Screen
+ * @author Ashna Tirougnaname
+ *
+ * version 2.0
+ */
+
 
 import java.awt.EventQueue;
 
