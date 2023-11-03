@@ -1,3 +1,9 @@
+/**
+ * Second Screen for Data Entry
+ * @author Smita Tallah and Ashna Tirougnaname
+ *
+ */
+
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 
@@ -8,11 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
-/**
- * Second Screen for Data Entry
- * @author Smita Tallah and Ashna Tirougnaname
- *
- */
+
 public class Screen2 extends JFrame{
 
 	/**

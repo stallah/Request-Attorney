@@ -1,4 +1,10 @@
-import java.awt.EventQueue;
+/**
+ * Second Screen after Approver enters form number.
+ * @author Smita Tallah and Ashna Tirougnaname
+ *
+ */
+
+ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JToggleButton;
@@ -10,11 +16,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-/**
- * Second Screen after Approver enters form number.
- * @author Smita Tallah and Ashna Tirougnaname
- *
- */
+
 public class AScreen2 {
 
 	 JFrame frame;
