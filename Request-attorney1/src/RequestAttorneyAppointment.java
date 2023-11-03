@@ -1,8 +1,8 @@
 
 /**
- * Business Object to request an attorney for appointment
+ * Business Object to request an attorney for appointment in RA
  * @author Smita Tallah
- * @version 1.0
+ * @version 2.0
  */
 public class RequestAttorneyAppointment {
     private int requestFormNumber;
@@ -13,7 +13,14 @@ public class RequestAttorneyAppointment {
         this.appointmentDetail = null;
         this.requestFormNumber = 0;
     }
-
+    //private constructors with paramaters
+    /*
+    private RequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
+        this.requestFormNumber = requestFormNumber;
+        this.appointmentDetail = appointmentDetail;
+    }
+    
+*/
     //creates the object
     public static RequestAttorneyAppointment createRequestAttorneyAppointment(String appointmentDetail, int requestFormNumber){
         RequestAttorneyAppointment ra = new RequestAttorneyAppointment();
@@ -40,11 +47,11 @@ public class RequestAttorneyAppointment {
     }
 
     //object methods
-    public boolean acceptRequest(int requestFormNumber){
+    public static boolean acceptRequest(int requestFormNumber){
         return true;
     }
 
-    public boolean rejectRequest(int requestFormNumber){
+    public static boolean rejectRequest(int requestFormNumber){
         return true;
     }
 
@@ -52,8 +59,8 @@ public class RequestAttorneyAppointment {
         return true;
     }
     
-    public String appointmentDetails(int requestFormNumber){
-        return null;
+    public static String appointmentDetails(int requestFormNumber){
+        return "01/01/2024";
 
     }
 

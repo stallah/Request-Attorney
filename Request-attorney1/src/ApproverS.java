@@ -1,7 +1,11 @@
+/**
+ * Starting Approver Screen
+ * @author Smita Tallah
+ * 
+ */
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import java.awt.BorderLayout;
 import javax.swing.JTextArea;
@@ -14,6 +18,9 @@ import java.awt.Panel;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JButton;
 
 public class ApproverS {
 
@@ -54,21 +61,31 @@ public class ApproverS {
 		frmApprover.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JTextPane txtpnEnterFormNumber = new JTextPane();
-		txtpnEnterFormNumber.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtpnEnterFormNumber.setBackground(Color.LIGHT_GRAY);
-		txtpnEnterFormNumber.setBounds(10, 60, 150, 20);
-		txtpnEnterFormNumber.setText("Enter Form Number:");
-		panel.add(txtpnEnterFormNumber);
+		TextField formNum = new TextField();
+
+		formNum.setBounds(181, 59, 154, 21);
+		panel.add(formNum);
 		
-		TextField textField = new TextField();
-		textField.addActionListener(new ActionListener() {
+		JLabel lblNewLabel = new JLabel("Enter Form Number:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel.setBounds(31, 59, 144, 21);
+		panel.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Submit");
+		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "it works!!");
+				JOptionPane.showMessageDialog(null, "retrieving form...");
+				frmApprover.dispose();
+				
+				AScreen2 sc = new AScreen2();
+				sc.frame.setVisible(true);
+				
+				//call workflow methods
+				
 			}
 		});
-		textField.setBounds(166, 59, 154, 21);
-		panel.add(textField);
+		btnNewButton.setBounds(223, 110, 89, 23);
+		panel.add(btnNewButton);
 		frmApprover.setTitle(" Approver Screen");
 		frmApprover.setBounds(100, 100, 450, 300);
 		frmApprover.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
