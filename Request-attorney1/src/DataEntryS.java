@@ -5,7 +5,6 @@
  * version 2.0
  */
 
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -105,7 +104,9 @@ public class DataEntryS {
 				sc2.create_appt.setVisible(true);
 				sc2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				sc2.getContentPane().setLayout(null);
-				frmDataEntry.dispose();				
+				//
+				textField.setText(null);
+				//frmDataEntry.dispose();				
 			}
 		});
 		

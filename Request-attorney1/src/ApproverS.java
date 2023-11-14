@@ -1,8 +1,3 @@
-/**
- * Starting Approver Screen
- * @author Smita Tallah
- * 
- */
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -17,14 +12,20 @@ import java.awt.TextField;
 import java.awt.Panel;
 import java.awt.Font;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
-
+/**
+ * @version 4.1
+ * @author smita
+ *
+ */
 public class ApproverS {
 
 	private JFrame frmApprover;
+	private TextField formNum;
 
 	/**
 	 * Launch the application.
@@ -61,11 +62,13 @@ public class ApproverS {
 		frmApprover.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		TextField formNum = new TextField();
-
+		formNum = new TextField();
+		
 		formNum.setBounds(181, 59, 154, 21);
 		panel.add(formNum);
-		
+		LinkedList<Integer> list = setList();
+		formNum.setText(Integer.toString(Workflow.createWorkflow().getRequestFormNumber(list)));
+	
 		JLabel lblNewLabel = new JLabel("Enter Form Number:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel.setBounds(31, 59, 144, 21);
@@ -74,20 +77,49 @@ public class ApproverS {
 		JButton btnNewButton = new JButton("Submit");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			
+				//call workflow methods
+				//LinkedList<Integer> list = RequestAttorneyAppointment.list;
+				//Workflow.createWorkflow().getRequestFormNumber(list);
+
 				JOptionPane.showMessageDialog(null, "retrieving form...");
-				frmApprover.dispose();
+				//frmApprover.dispose();
 				
 				AScreen2 sc = new AScreen2();
 				sc.frame.setVisible(true);
 				
-				//call workflow methods
+				
 				
 			}
 		});
 		btnNewButton.setBounds(223, 110, 89, 23);
 		panel.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Next");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//workflow object
+				//LinkedList<Integer> list = setList();
+				formNum.setText(Integer.toString(Workflow.createWorkflow().getRequestFormNumber(list)));
+
+			}
+		});
+		btnNewButton_1.setBounds(297, 192, 89, 23);
+		panel.add(btnNewButton_1);
 		frmApprover.setTitle(" Approver Screen");
 		frmApprover.setBounds(100, 100, 450, 300);
 		frmApprover.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-}
+	protected LinkedList<Integer> setList(){
+		LinkedList<Integer> list = RequestAttorneyAppointment.list;
+		list.add(112);
+		list.add(113);
+		list.add(114);
+		return list;
+	}
+	
+	//send Ascreen2 current form number
+		protected Integer getCurrentFormNumber() {
+		return Integer.parseInt(formNum.getText());
+		}
+	}

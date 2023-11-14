@@ -3,7 +3,6 @@
  * @author Smita Tallah and Ashna Tirougnaname
  *
  */
-
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 

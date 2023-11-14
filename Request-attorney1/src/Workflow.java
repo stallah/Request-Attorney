@@ -3,8 +3,11 @@
  * @author: Ashna Tirougnaname
  * @version: 5.0
  */
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class Workflow{
+
     
     //private default constructor
     private Workflow(){
@@ -17,11 +20,14 @@ public class Workflow{
         Workflow wf = new Workflow();
         return wf;
     }
+    
+    public Integer getRequestFormNumber(LinkedList<Integer> list) {
+    	return list.remove();
+    }
 
 
 
     //workflow methods
-    //save attorney details
     private boolean saveAttorneyDetails(String attorneyDetails)
     {
         return true;
@@ -32,30 +38,30 @@ public class Workflow{
     }
 
 
-    //send request form
-    private boolean sendRequestForm(int requestFormNumber){
-        return false;
+//not using
+    private int sendRequestForm(int requestFormNumber){
+        return 0;
     }
 
     public int sendForm(int requestFormNumber) {
-        return sendRequestForm(requestFormNumber);  
+			return sendRequestForm(requestFormNumber); 
     }
 
 
 
-    //attorney response
-    public boolean attorneyResponse(int requestFormNumber) {
+
+    public boolean getAttorneyResponse(int requestFormNumber) {
         return false;
     }
     
 
 
-    //send attorney response
+
     private boolean sendAttorneyResponse(int requestFormNumber) {
         return true;
     }
 
-    public boolean sendAttResponse(int requestFormNumber)
+    public boolean sendAttResponse(Integer requestFormNumber)
     {
         return sendAttorneyResponse(requestFormNumber);
     }
