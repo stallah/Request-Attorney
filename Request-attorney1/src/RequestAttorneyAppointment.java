@@ -4,14 +4,23 @@
  * @author Smita Tallah
  * @version 2.0
  */
+import java.util.LinkedList;
+
+/**
+ * Business Object to request an attorney for appointment in RA
+ * @author Smita Tallah
+ * @version 1.0
+ */
 public class RequestAttorneyAppointment {
     private int requestFormNumber;
     private String appointmentDetail;
-
+	protected static LinkedList<Integer> list = new LinkedList<>();
+	
     //private default constructor
     private RequestAttorneyAppointment(){
         this.appointmentDetail = null;
         this.requestFormNumber = 0;
+        this.list = null;
     }
     //private constructors with paramaters
     /*
@@ -26,10 +35,21 @@ public class RequestAttorneyAppointment {
         RequestAttorneyAppointment ra = new RequestAttorneyAppointment();
         ra.setAppointmentDetail(appointmentDetail);
         ra.setRequestFormNumber(requestFormNumber);
+        //add to list of request form numbers
+        //list.add((Integer)requestFormNumber);
         return ra;
     }
 
-    //setters and getters for attributes
+    public LinkedList<Integer> getRequestFormNumbers(){
+    	list.add(112);
+    	list.add(113);
+    	list.add(114);
+    	list.add(115);
+    	
+    	return list;
+    }
+    
+  //setters and getters for attributes
     protected int getRequestFormNumber(){
         return this.requestFormNumber;
     }
@@ -50,11 +70,11 @@ public class RequestAttorneyAppointment {
     public static boolean acceptRequest(int requestFormNumber){
         return true;
     }
-
+//used by approver
     public static boolean rejectRequest(int requestFormNumber){
         return true;
     }
-
+//used by approver
     public boolean updateAvailability(String newAvailability){
         return true;
     }
