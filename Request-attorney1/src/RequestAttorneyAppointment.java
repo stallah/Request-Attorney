@@ -2,7 +2,7 @@
 /**
  * Business Object to request an attorney for appointment in RA
  * @author Smita Tallah
- * @version 2.0
+ * @version 3.0
  */
 import java.util.LinkedList;
 
