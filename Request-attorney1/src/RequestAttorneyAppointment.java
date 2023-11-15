@@ -74,7 +74,7 @@ public class RequestAttorneyAppointment {
     public static boolean rejectRequest(int requestFormNumber){
         return true;
     }
-//used by approver
+//used by data entry
     public boolean updateAvailability(String newAvailability){
         return true;
     }
