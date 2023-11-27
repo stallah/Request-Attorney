@@ -1,7 +1,7 @@
 /**
  * Workflow
  * @author: Ashna Tirougnaname
- * @version: 5.0
+ * @version: 6.0
  */
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -21,13 +21,13 @@ public class Workflow{
         return wf;
     }
     
+    //getter for the request for number
     public Integer getRequestFormNumber(LinkedList<Integer> list) {
     	return list.remove();
     }
 
-
-
     //workflow methods
+    //saves attorney details
     private boolean saveAttorneyDetails(String attorneyDetails)
     {
         return true;
@@ -38,7 +38,7 @@ public class Workflow{
     }
 
 
-//not using
+    //not using
     private int sendRequestForm(int requestFormNumber){
         return 0;
     }
@@ -49,14 +49,14 @@ public class Workflow{
 
 
 
-
+    //gets the attorney response (if they have accepted or rejected the form)
     public boolean getAttorneyResponse(int requestFormNumber) {
         return false;
     }
     
 
 
-//send response back to the workflow
+    //send attorney response back to the workflow
     private boolean sendAttorneyResponse(int requestFormNumber) {
         return true;
     }
